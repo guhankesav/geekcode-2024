@@ -1,9 +1,28 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+
+        #Solution 1
+        counterS, counterT = {}, {}
+
+        for char in s:
+            counterS[char] = counterS.get(char, 0) + 1
         
+        for char in t:
+            counterT[char] = counterT.get(char, 0) + 1
+
+        if len(counterS) != len(counterT):
+            return False
+            
+        for char in counterT:
+            if counterT.get(char, -1) != counterS.get(char, -1):
+                return False
+        
+        return True
+
+        # Solution 2
         return Counter(s) == Counter(t)
 
-        
+        #Solution 3
         return sorted(s) == sorted(t)
 
 
