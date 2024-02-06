@@ -2,13 +2,20 @@ class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
 
 
-        # Solution 1
+        """
+        Solution 1
+
+        using count in an array
+        Tiem complexity
+        Space complecity
+        """
         countMap = {}
 
         for val in nums:
             countMap[val] = countMap.get(val, 0) + 1
         
         countArr = [[] for i in range(len(nums) + 1)]
+        
         for key, count in countMap.items():
             countArr[count].append(key)
 
