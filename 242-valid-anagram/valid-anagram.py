@@ -1,7 +1,9 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
 
-        #Solution 0
+#####################################################################
+
+        #Solution 1
         count = [0] * 26
         
         # Count the frequency of characters in string s
@@ -18,8 +20,10 @@ class Solution:
                 return False
         
         return True
-        
-        #Solution 1
+
+#####################################################################
+
+        #Solution 2
         counterS, counterT = {}, {}
 
         for char in s:
@@ -37,7 +41,9 @@ class Solution:
         
         return True
 
-        # Solution 2
+#####################################################################
+
+        # Solution 3
         if len(s) != len(t):
             return False
 
@@ -51,15 +57,13 @@ class Solution:
                 return False
         return True
 
+#####################################################################
 
-
-        # Solution 3
+        # Solution 4
         return Counter(s) == Counter(t)
 
-        #Solution 4
+
+#####################################################################
+
+        #Solution 5
         return sorted(s) == sorted(t)
-
-
-
-
-        
