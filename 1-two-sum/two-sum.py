@@ -7,13 +7,14 @@ class Solution:
         TimeComplexity - O(n)
         spaceComplexity - O(n)
         """
-        hashMap = {}
+        countMap = {}
+
         for index, value in enumerate(nums):
 
-            if (target - value) in hashMap:
-                return [index, hashMap[target - value]]
-                
-            hashMap[value] = index
+            if (target - value) in countMap:
+                return [index, countMap[target - value]]
+
+            countMap[value] = index
             
 
 
