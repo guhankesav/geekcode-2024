@@ -8,6 +8,7 @@ class Solution:
                 return True
             hashSet.add(i)
         return False
+        
 # Solution 2
         nums.sort()
         i = 0
@@ -17,6 +18,7 @@ class Solution:
             i += 1
 
         return False
+
 # Solution 3
         for i in range(len(nums)):
             for j in range(i+1, len(nums)):
